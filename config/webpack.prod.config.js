@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -8,14 +9,9 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../dist/static'),
     filename: 'bundle.js',
-    library: 'react-component-stencil',
-    libraryTarget: 'umd'
-  },
-  externals: {
-    'react': 'react',
-    'react-dom': 'react-dom'
+    publicPath: '/static/'
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -25,7 +21,12 @@ module.exports = {
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin("bundle.css", { allChunks: true })
+    new ExtractTextPlugin("bundle.css", { allChunks: true }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../index-template.html'),
+      favicon: 'favicon.ico',
+      filename: '../index.html'
+    })
   ],
   module: {
     loaders: [

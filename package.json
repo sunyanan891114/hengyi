@@ -6,11 +6,10 @@
     "node": ">=5.0"
   },
   "files": [
-    "lib",
     "dist"
   ],
   "scripts": {
-    "start": "node examples/server.js",
+    "start": "node server.js",
     "clean": "rm -rf ./target ./lib ./dist",
     "babel": "babel -d lib src",
     "babel:watch": "watch 'npm run babel' ./src",
@@ -36,6 +35,7 @@
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.28.0",
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.0",

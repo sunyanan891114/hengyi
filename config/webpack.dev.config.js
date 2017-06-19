@@ -1,15 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const include = [ path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../examples/') ];
+const include = [ path.resolve(__dirname, '../src/')];
 
 module.exports = {
   devtool: 'source-maps',
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client',
-    './examples/scss/default.scss',
-    './examples/js/index'
+    './src/scss/default.scss',
+    './src/index'
   ],
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -18,7 +19,12 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../index-template.html'),
+      favicon: 'favicon.ico',
+      filename: '../index.html'
+    })
   ],
   module: {
     loaders: [
