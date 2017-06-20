@@ -1,8 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import HelloWorld from './js/HelloWorld';
+import Homepage from './js/Homepage';
 
 render(
-    <HelloWorld />,
-    document.getElementById('root')
+    <Homepage />, document.getElementById('root')
 );
