@@ -26,8 +26,7 @@ export default () => {
           </nav>
 
           <div className="site-info">
-            <a href="https://wordpress.com/?ref=footer_blog">在WordPress.com的博客.</a>
-
+            <a>大连恒亿偶合器有限公司</a>
           </div>
         </div>
       </footer>

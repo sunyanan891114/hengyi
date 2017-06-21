@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Homepage from './js/Homepage';
+import Router from './router';
 
 render(
-    <Homepage />, document.getElementById('root')
+    <Router/>, document.getElementById('root')
 );
