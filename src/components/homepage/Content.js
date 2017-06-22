@@ -2,33 +2,25 @@ import React from 'react';
 import Aside from './Aside';
 
 export default () => {
-  const firstPageBackground = {
-    backgroundImage: 'url(https://dalianhengyi.files.wordpress.com/2017/06/photo-1438302439441-82e18f791f5e.jpeg?w=1600&#038;h=1076&#038;crop=1)'
-  };
 
   return (
       <div id="content" className="site-content">
 
         <div id="primary" className="content-area">
           <main id="main" className="site-main" role="main">
-
-
-            <article id="post-5" className="post-5 page type-page status-publish has-post-thumbnail hentry"
-                     style={ firstPageBackground }>
+            <article className="page type-page status-publish has-post-thumbnail hentry welcome">
               <div className="hentry-wrapper">
                 <header className="entry-header">
-                  <h1 className="entry-title">欢迎</h1></header>
-
-                <div className="entry-content">
-                  <p>大连恒亿偶合器有限公司以国际最先进液力传动技术为平台，秉承“自主创新、科技步步领先”的发展宗旨，坚持实施集约化经营战略，致力于打造出国内液力行业最具核心竞争力的一流公司。
-                  </p>
-                </div>
-
+                  <h1 className="entry-title">
+                    欢迎光临
+                    <p>大连恒亿偶合器有限公司</p>
+                  </h1>
+                </header>
               </div>
             </article>
 
 
-            <article id="post-7" className="post-7 page type-page status-publish hentry">
+            <article className="page type-page status-publish hentry">
               <div className="hentry-wrapper">
                 <header className="entry-header">
                   <h2 className="entry-title">公司概况</h2></header>
@@ -40,8 +32,7 @@ export default () => {
               </div>
             </article>
 
-            <article id="post-8" className="post-8 page type-page status-publish has-post-thumbnail hentry"
-                     style={ firstPageBackground }>
+            <article id="post-8" className="post-8 page type-page status-publish has-post-thumbnail hentry welcome">
               <div className="hentry-wrapper">
                 <header className="entry-header">
                   <h2 className="entry-title">笃守诚信、创造卓越</h2></header>
