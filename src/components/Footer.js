@@ -27,6 +27,7 @@ export default () => {
 
           <div className="site-info">
             <a>大连恒亿偶合器有限公司</a>
+            <p>Hosted by <a href="https://pages.coding.me" style={{fontWeight: 'bold'}}>Coding Pages</a></p>
           </div>
         </div>
       </footer>
