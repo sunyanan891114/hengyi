@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Header from './components/Header';
 import Homepage from './components/homepage/Homepage';
@@ -10,7 +10,7 @@ import Connect from './components/Connect';
 
 export default () => {
   return (
-      <Router>
+      <Router history="">
         <div>
           <Header/>
           <Route exact path="/" component={ Homepage }/>

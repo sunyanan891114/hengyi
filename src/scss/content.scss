@@ -1,8 +1,10 @@
 #main {
   .welcome {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-                url(../assets/main_bg.jpeg);
+                url(../assets/main_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 95px);
   }
 }
