@@ -7,4 +7,28 @@
     background-position: center center;
     height: calc(100vh - 95px);
   }
+
+  .introduction {
+    color: #2c313f;
+    padding: 40px 0;
+    min-height: 400px;
+
+    .introduction-img {
+      width: 50%;
+      float: left;
+      height: 370px;
+      background: url(../assets/ouheqi.png) no-repeat;
+      background-position: top;
+    }
+
+    .introduction-container {
+      overflow: hidden;
+      width: 40%;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+  }
 }

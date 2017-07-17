@@ -31,15 +31,16 @@ export default class Header extends React.Component {
                     <li className={`menu-item menu-item-type-post_type menu-item-object-page ${this.state.active === 'welcome' ? 'current-menu-item' : '' }`}>
                       <Link to="/" onClick={ this.handleSwitchTab.bind(this, 'welcome')}>欢迎</Link>
                     </li>
-                    <li className={`menu-item menu-item-type-post_type menu-item-object-page ${this.state.active === 'about' ? 'current-menu-item' : '' }`}>
-                      <Link to="/about" onClick={ this.handleSwitchTab.bind(this, 'about')}>关于</Link>
+                    <li className={`menu-item menu-item-type-post_type menu-item-object-page ${this.state.active === 'product' ? 'current-menu-item' : '' }`}>
+                      <Link to="/product" onClick={ this.handleSwitchTab.bind(this, 'product')}>调速型液力偶合器</Link>
+                    </li>
+                    <li className={`menu-item menu-item-type-post_type menu-item-object-page ${this.state.active === 'xianju' ? 'current-menu-item' : '' }`}>
+                      <Link to="/xianju" onClick={ this.handleSwitchTab.bind(this, 'xianju')}>限矩型液力偶合器</Link>
                     </li>
                     <li className={`menu-item menu-item-type-post_type menu-item-object-page ${this.state.active === 'connect' ? 'current-menu-item' : '' }`}>
                       <Link to="/connect" onClick={ this.handleSwitchTab.bind(this, 'connect')}>联系信息</Link>
                     </li>
-                    <li className={`menu-item menu-item-type-post_type menu-item-object-page ${this.state.active === 'product' ? 'current-menu-item' : '' }`}>
-                      <Link to="/product" onClick={ this.handleSwitchTab.bind(this, 'product')}>产品</Link></li>
-                  </ul>
+                    </ul>
                 </div>
               </nav>
             </div>
