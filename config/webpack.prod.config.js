@@ -19,7 +19,6 @@ module.exports = {
         "NODE_ENV": JSON.stringify("production")
       }
     }),
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin("bundle.css", { allChunks: true }),
     new HtmlWebpackPlugin({
@@ -29,10 +28,20 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', include: [ path.join(__dirname, '../src/') ] },
-      { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'url?limit=10000' },
-      { test: /\.(s)*css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader") }
+    rules: [
+      { test: /\.js$/, use: 'babel-loader', include: [ path.join(__dirname, '../src/') ] },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: ['url-loader?limit=10000', "img-loader"]
+      },
+      {
+        test: /\.(s)*css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
+        ]
+      }
     ]
   }
 };
