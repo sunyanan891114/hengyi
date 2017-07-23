@@ -1,4 +1,8 @@
-@import 'homepage.css';
-@import 'content.scss';
-@import 'about.scss';
-@import 'product.scss';
+@import "mixin";
+@import "common";
+@import 'content';
+@import 'about';
+@import 'product';
+@import 'header';
+@import 'hero';
+@import 'footer';

@@ -32,7 +32,7 @@ module.exports = {
       { test: /\.js$/, use: 'babel-loader', include: [ path.join(__dirname, '../src/') ] },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: ['url-loader?limit=10000', "img-loader"]
+        use: ['url-loader?limit=1000', "img-loader"]
       },
       {
         test: /\.(s)*css$/,

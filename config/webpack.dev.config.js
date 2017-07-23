@@ -13,15 +13,16 @@ module.exports = {
     './src/index'
   ],
   output: {
+    path: path.resolve(__dirname, '../static'),
     filename: 'bundle.js',
-    publicPath: '/src/assets'
+    publicPath: '/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../index-template.html'),
       favicon: 'favicon.ico',
-      filename: '../index.html'
+      filename: '../static/index.html'
     })
   ],
   module: {
@@ -29,7 +30,10 @@ module.exports = {
       { test: /\.js$/, use: 'babel-loader', include },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: ['url-loader?limit=10000', "img-loader"]
+        use: [
+          { loader: 'url-loader?limit=0' },
+          { loader: "img-loader" }
+        ]
       },
       {
         test: /\.(s)*css$/,
@@ -42,7 +46,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, "../"),
+    contentBase: path.join(__dirname, "../static"),
     compress: true,
     port: 9000
   }
