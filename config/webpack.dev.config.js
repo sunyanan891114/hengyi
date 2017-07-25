@@ -30,10 +30,7 @@ module.exports = {
       { test: /\.js$/, use: 'babel-loader', include },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          { loader: 'url-loader?limit=0' },
-          { loader: "img-loader" }
-        ]
+        use: ['url-loader?limit=8192&name=images/[name].[ext]', 'img-loader']
       },
       {
         test: /\.(s)*css$/,

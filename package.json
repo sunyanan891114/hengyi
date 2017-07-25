@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "start": "webpack-dev-server --open --config ./config/webpack.dev.config.js",
-    "clean": "rm -rf ./target ./lib ./dist",
+    "clean": "rm -rf ./target ./lib ./dist ./static index.html",
     "babel": "babel -d lib src",
     "babel:watch": "watch 'npm run babel' ./src",
     "build": "npm run clean && NODE_ENV=production npm run babel && NODE_ENV=production webpack --config config/webpack.prod.config.js",
