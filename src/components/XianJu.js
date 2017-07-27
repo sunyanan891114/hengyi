@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 export default() => {
   return(
-      <div>
+      <div className="xianju">
         <Header activeTab="xianju"/>
         <img src={cover} className="product-img" alt="限矩型液力偶合器"/>
         <img src={content1} className="product-img" alt="限矩型液力偶合器"/>

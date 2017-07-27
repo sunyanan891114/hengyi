@@ -10,7 +10,7 @@ import Footer from './Footer';
 
 export default() => {
   return (
-      <div>
+      <div className="product">
         <Header activeTab="product"/>
         <img className="product-img" src={cover}/>
         <img className="product-img" src={content1}/>
