@@ -1,14 +1,10 @@
 import React from 'react';
-import hero1 from '../../assets/main_bg.jpg';
-import hero2 from '../../assets/main_bg2.jpg';
-import hero3 from '../../assets/main_bg3.jpeg';
-import hero4 from '../../assets/ouheqi.png';
 
 export default class Hero extends React.Component {
   constructor(props) {
     super(props);
 
-    this.images = ['bg_1', 'bg_2', 'bg_3', 'bg_4'];
+    this.images = ['bg_1', 'bg_2', 'bg_3', 'bg_4', 'bg_5', 'bg_6'];
     this.state = {
       imageIndex: 0
     };
@@ -18,12 +14,12 @@ export default class Hero extends React.Component {
   }
 
   nextImage() {
-    this.switchImage((this.state.imageIndex + 1) % 4);
+    this.switchImage((this.state.imageIndex + 1) % 6);
   }
 
   prevImage() {
-    if (this.state.imageIndex === 0) this.switchImage(3);
-    else this.switchImage((this.state.imageIndex - 1) % 4);
+    if (this.state.imageIndex === 0) this.switchImage(5);
+    else this.switchImage((this.state.imageIndex - 1) % 6);
   }
 
   switchImage(imageIndex) {
